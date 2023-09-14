@@ -1,0 +1,10 @@
+[Unit]
+Description="HashiCorp Vault <version> - A tool for managing secrets"
+
+[Service]
+User=vault
+Group=vault
+ExecStart=/usr/local/bin/vault server -config /etc/vault.d/vault.hcl
+
+[Install]
+WantedBy=multi-user.target
